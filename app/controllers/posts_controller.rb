@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    binding.pry
     @post = Post.new(params[:post])
     if @post.save
       flash[:notice] = "Post was saved."
