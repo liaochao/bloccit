@@ -1,4 +1,6 @@
 <h1><%= @post.title %></h1>
+<% if can? :edit, @post %>
 <%= link_to "edit", edit_post_path(@post), class: 'btn btn-mini'%>
 <%= link_to "delete", @post.delete, class: 'btn btn-mini' %>
+<% end %>
 <p><%= @post.body %><p>
