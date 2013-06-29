@@ -1,6 +1,6 @@
 if Rails.env.production?
   ActionMailer::Base.delivery_method = :stmp
-  ActionMailer::Base.smtp_settings: {
+  ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
