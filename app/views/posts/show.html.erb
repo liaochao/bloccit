@@ -5,6 +5,9 @@
       <%= image_tag(@post.user.avatar.tiny.url) if @post.user.avatar? %>
       summitted <%= time_ago_in_words(@post.created_at) %> ago by <%=@post.user.name %>
     </small>
+    <div>
+      <%= image_tag(@post.images.url) if @post.images? %>
+    </div>
     <p><%= markdown @post.body %></p>
   </div>
   <div class = "span4">
